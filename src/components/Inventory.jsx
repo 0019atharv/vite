@@ -17,6 +17,7 @@ const Inventory = () => {
     try {
       const response = await fetch(`https://vite-app-bdh8g6bahmd6gwdp.eastus2-01.azurewebsites.net/api/inventory?page=${page}&search_query=${searchQuery}`);
       const data = await response.json();
+      console.log(response,data)
       if (response.ok) {
         setInventoryData(data.inventory);
         setTotalCount(data.total_count);
