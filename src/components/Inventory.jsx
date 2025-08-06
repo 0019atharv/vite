@@ -15,7 +15,7 @@ const Inventory = () => {
   const fetchInventoryData = async (page = 1) => {
     setIsLoading(true);
     try {
-      const response = await fetch(`https://vite-app-bdh8g6bahmd6gwdp.eastus2-01.azurewebsites.net/api/inventory?page=${page}&search_query=${searchQuery}`);
+      const response = await fetch(`https://vite-backend-a6hwbjcqh6ddfec5.eastus2-01.azurewebsites.net/api/inventory`);
       const data = await response.json();
       console.log(response,data)
       if (response.ok) {
