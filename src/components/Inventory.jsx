@@ -15,7 +15,7 @@ const Inventory = () => {
   const fetchInventoryData = async (page = 1) => {
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/inventory?page=${page}&search_query=${searchQuery}`);
+      const response = await fetch(`https://vite-app-bdh8g6bahmd6gwdp.eastus2-01.azurewebsites.net/api/inventory?page=${page}&search_query=${searchQuery}`);
       const data = await response.json();
       if (response.ok) {
         setInventoryData(data.inventory);
